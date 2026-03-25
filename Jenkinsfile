@@ -3,7 +3,7 @@ pipeline {
     environment {
         AWS_ACCOUNT_ID="861276106382"
         AWS_DEFAULT_REGION="us-east-1"
-        IMAGE_REPO_NAME="ecr-mypython-app-image"
+        IMAGE_REPO_NAME="ecr-mypython-app-image2"
         IMAGE_TAG="1.0"
         REPOSITORY_URI = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/${IMAGE_REPO_NAME}"
     }
@@ -23,7 +23,7 @@ pipeline {
             steps {
                 script {
  
-                    git branch: 'master', url: 'https://github.com/osagiefe/deploy-python-ecr-aws-eks.git' 
+                    git branch: 'main', url: 'https://github.com/osagiefe/my-dockerimage-githubaction.git' 
                 }
             }
         }
